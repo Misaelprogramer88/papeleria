@@ -1,0 +1,743 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar {
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* Navbar transparente */
+.transparent-nav {
+    background-color: rgba(27, 27, 27, 0); /* Color con transparencia */
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar sólida al hacer scroll */
+.solid-nav {
+    background-color: #1874b6ea !important; /* Fondo sólido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.7s ease-in-out; /* Transición suave */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover {
+    color: #e0e0e0; /* Color al pasar el mouse */
+}
+
+.navbar i {
+    margin-right: 5px; /* Espaciado entre el icono y el texto */
+}
+
+.navbar .logo {
+    width: 100px; /* Ajusta el tamaño del logo si es necesario */
+    
+}
+
+.navbar-nav {
+    margin-left: auto; /* Empuja los elementos a la derecha */
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    padding-right: 15px;
+}
+
+.custom-section {
+    background-color: #1f2365; /* Fondo para la sección */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0; /* Elimina el margen */
+}
+
+.custom-image {
+    max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+}
+
+.info {
+    color: #333;
+    color: rgb(2, 187, 187);
+}
+
+.logo-large {
+    width: 50px; /* Tamaño del logo en laptops */
+}
+
+.logo-small {
+    width: 100px; /* Tamaño del logo en celulares */
+}
+
+/* Media query para ajustar la altura de la navbar en móviles */
+@media (max-width: 768px) {
+    .navbar {
+        height: 70px; /* Ajusta la altura de la navbar para dispositivos móviles */
+        padding: 10px; /* Ajusta el padding si es necesario */
+    }
+
+    .navbar .logo-large {
+        display: none; /* Oculta el logo grande en dispositivos móviles */
+    }
+
+    .navbar .logo-small {
+        display: inline-block; /* Muestra el logo pequeño en dispositivos móviles */
+    }
+
+    .navbar-brand img {
+        max-height: 40px; /* Ajusta el tamaño del logo para dispositivos móviles */
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Mantiene los elementos en una fila */
+    }
+
+    .navbar li {
+        margin-right: 10px; /* Reduce el espacio entre ítems en móviles */
+    }
+
+    .navbar a{
+        font-size: .7rem;
+    }
+    /* Tamaño de íconos solo en pantallas móviles */
+    .navbar .icon {
+        font-size: 0.8rem; /* Ajusta el tamaño solo en pantallas pequeñas */
+    }
+   
+}
+
+
+   
+
+
+
+.title1{
+    font-size: 3.2rem;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    margin-top: 0px;
+    text-align: left;
+    font-weight: 600;
+
+}
+
+.title2 {
+    font-size: 5rem; /* Tamaño de la fuente */
+    font-family: "Poppins", sans-serif; /* Tipo de letra */
+    color: rgb(255, 255, 255); /* Color del texto */
+    margin-top: 20px; /* Espacio superior */
+    text-align: center; /* Centrar el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto para mejorar la legibilidad */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    line-height: 1.2; /* Altura de línea para mejor legibilidad */
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+/* Añadir efecto hover */
+.title2:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
+}
+
+.title {
+    font-size: 2.2rem; /* Ajusta el tamaño del H1 para que sea grande */
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+    font-weight: 600;
+   
+   
+}
+
+
+.text-section {
+    text-align: left;
+    flex-basis: 60%; /* Asigna un tamaño mayor al texto */
+}
+
+.image-section {
+    text-align: right;
+    flex-basis: 40%; /* Asigna un tamaño menor a la imagen */
+}
+
+.image-section img {
+    width: 100%; /* La imagen se ajusta al contenedor asignado */
+    max-width: 300px; /* Limita el tamaño máximo de la imagen */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem; /* Reduce el tamaño del H1 en dispositivos móviles */
+    }
+    
+    .d-flex {
+        flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+    }
+
+    .text-section, .image-section {
+        text-align: center; /* Centra los textos e imagen en móviles */
+    }
+
+    .image-section img {
+        max-width: 200px; /* Reduce el tamaño máximo de la imagen en pantallas pequeñas */
+    }
+}
+
+.custom-container {
+    padding: 50px; /* Incrementa el padding del container */
+    margin-top: 0;
+}
+
+.text-section p {
+    font-size: 1.5rem; /* Aumenta el tamaño de la letra de los párrafos */
+    line-height: 1.8; /* Mejora el espaciado entre las líneas */
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .text-section p {
+        font-size: 1.2rem; /* Reduce ligeramente el tamaño de letra en pantallas pequeñas */
+    }
+}
+
+
+.card {
+    max-width: 250px; /* 🔹 Ajusta este valor para cambiar el tamaño */
+    margin: auto; /* 🔹 Centra las cards */
+ 
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.btn-buy{
+    width: 200px;
+}
+
+/* Efecto hover para el botón comprar */
+.btn-buy:hover {
+    background-color: #28a745; /* Cambio de color del botón al pasar el mouse */
+    transition: background-color 0.3s;
+}
+
+/* Ajuste para la sección de productos */
+.container-fluid {
+    max-width: 100vw; /* Ocupa todo el ancho disponible */
+    padding: 30px;
+}
+
+
+
+
+
+
+
+.text-wrapper {
+    padding: 10px; /* Espaciado interno */
+    border: 5px solid TRANSPARENT; /* Borde negro alrededor del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: white; /* Fondo blanco */
+    margin-top: 10px; /* Margen superior */
+}
+
+
+.footer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color:#064a7a; /* Azul más fuerte */
+    color: white;
+    text-align: center;
+    padding: 40px 20px; /* Mayor espacio vertical */
+    position: relative; /* Aseguramos que no cubra todo */
+    margin-top: 20px; /* Espacio entre las tarjetas y el pie */
+    
+
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.social a {
+    margin: 0 10px;
+    color: white; /* Color de los iconos en el pie */
+}
+
+.footer-services {
+    margin-top: 20px;
+    font-size: 16px; /* Tamaño de fuente para servicios */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.icon {
+    font-size: 1.5rem; /* Tamaño de icono en móvil */
+    transition: font-size 0.3s ease; /* Transición suave al cambiar el tamaño */
+}
+
+@media (min-width: 768px) {
+    .icon {
+        font-size: 2rem; /* Tamaño de icono en pantallas más grandes */
+    }
+}
+
+.fade-in {
+    opacity: 0; /* Las imágenes son inicialmente invisibles */
+    transition: opacity 2s ease-out; /* Solo aplicamos la transición a la opacidad */
+}
+
+.fade-in.show {
+    opacity: 1; /* Aparecen cuando entren en la vista */
+}
+
+
+
+
+/* Efecto de fade-in y movimiento desde abajo */
+.fade-in-slide {
+    opacity: 0; /* Elemento inicialmente invisible */
+    transform: translateY(50px); /* Posicionado 50px más abajo */
+    transition: opacity 2s ease-out, transform 1s ease-out; /* Transición para opacidad y movimiento */
+}
+
+.fade-in-slide.show {
+    opacity: 1; /* Aparece cuando entra en la vista */
+    transform: translateY(0); /* Se mueve hacia su posición original */
+}
+
+
+
+/* Ajusta el ancho en pantallas grandes */
+.full-width-lg {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+.full-width-lg {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .full-width-lg {
+        width: auto; /* Restablece el ancho a automático en pantallas pequeñas */
+    }
+}.parallax-section {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 🔹 Ajusta la imagen sin deformarla */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.parallax-content {
+    color: white; /* Color del texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+
+
+.letra {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Efecto de zoom: comienza pequeño y crece */
+.zoom-in {
+    opacity: 0; /* Elemento inicialmente invisible */
+    transform: scale(0.5); /* Comienza al 50% de su tamaño */
+    transition: opacity 1.5s ease-out, transform .6s ease-out; /* Transición suave */
+}
+
+.zoom-in.show {
+    opacity: 1; /* Aparece al entrar en la vista */
+    transform: scale(1); /* Se expande al tamaño original */
+}
+
+/* Ajusta el ancho en pantallas grandes */
+.full-width-lg {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* Efecto de deslizamiento desde la izquierda */
+.slide-in-left {
+    opacity: 0; /* Elemento inicialmente invisible */
+    transform: translateX(-100px); /* Posicionado 100px a la izquierda de su lugar original */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Transición suave */
+}
+
+.slide-in-left.show {
+    opacity: 1; /* Aparece al entrar en la vista */
+    transform: translateX(0); /* Se mueve a su posición original */
+}
+
+/* Ajusta el ancho en pantallas grandes */
+.full-width-lg {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 3rem; /* Reduce el tamaño del H1 en dispositivos móviles */
+    }
+
+    .img-responsive {
+        max-width: 80px; /* Reduce el tamaño máximo de la imagen en móviles */
+        
+    }
+}
+
+@media (max-width: 767px) {
+    .title1 {
+        font-size: 1.5rem; /* Reduce el tamaño del H1 en dispositivos móviles */
+    }
+
+    .img-responsive {
+        max-width: 150px; /* Reduce el tamaño máximo de la imagen en móviles */
+        
+    }
+}
+
+@media (min-width: 768px) {
+
+    .img-responsive {
+        max-width: 220px; 
+        margin-bottom: 20px
+        
+    }
+}
+
+
+table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 20px; /* Espaciado entre las celdas */
+    
+}
+
+.img-container {
+    display: inline-block;
+   
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-container img {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    max-width: 100%;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.5s ease-in-out;
+}
+
+.img-container:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1); /* Zoom al pasar el mouse */
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.img-container img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    table {
+        display: block; /* Cambia el diseño de la tabla a bloque */
+        overflow-x: auto; /* Permite el desplazamiento horizontal */
+    }
+    tr {
+        display: flex; /* Usar flexbox para el diseño */
+        flex-wrap: wrap; /* Permitir que las filas se ajusten */
+    }
+    td {
+        flex: 1 1 50%; /* Cada celda ocupará el 50% del ancho disponible */
+        box-sizing: border-box; /* Asegura que el padding y el margen no afecten el tamaño */
+    }
+    
+    .img-container {
+        display: inline-block;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .img-container img {
+        width: 150px; /* Ajusta el tamaño de la imagen */
+        max-width: 100%;
+        /* Elimina el filtro gris y la opacidad */
+        filter: none; /* Elimina el filtro gris */
+        opacity: 1; /* Asegura que la imagen sea completamente opaca */
+    }
+
+    .img-container:hover img {
+        transform: scale(1.1); /* Zoom al pasar el mouse */
+    }
+}
+
+.services-title {
+    font-size: 2rem; /* Tamaño de fuente llamativo */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #DDAA00; /* Color del texto */
+}
+
+.services-table {
+    width: 100%; /* Tabla a todo lo largo de la página */
+    border-collapse: collapse; /* Eliminar espacios entre celdas */
+}
+
+.services-table td {
+    padding: 15px; /* Espaciado interno */
+    font-size: 1.5rem; /* Tamaño de fuente de los servicios */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Línea debajo de cada fila */
+    color: #333; /* Color del texto */
+}
+
+.services-table tr:hover {
+    background-color: #f5f5f5; /* Fondo al pasar el mouse */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espacio entre los botones */
+}
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Añade una transición suave */
+}
+.btn-1 {
+    background-color: #3e3b3b; /* Color inicial */
+    color: rgb(255, 255, 255);
+}
+.btn-2 {
+    background-color: #525252; /* Color inicial */
+    color: white;
+}
+.active {
+    background-color: #f1ed13; /* Color amarillo activo */
+}
+.inactive {
+    background-color: #d3d3d3; /* Color gris */
+}
+.btn:hover {
+    background-color: rgba(0, 71, 151, 0.832); /* Mantiene el color actual al pasar el mouse */
+    color: rgb(255, 255, 255); /* Asegura que el texto siga siendo blanco */
+    transform: scale(1.1); /* Zoom al pasar el mouse */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+}
+
+/* Media Query para pantallas pequeñas */
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .btn {
+        width: 150px; /* Botones más pequeños */
+        font-size: 1rem; /* Texto más pequeño */
+        padding: 8px 16px; /* Menor espacio interno */
+    }
+}
+
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -260px; /* Oculta la barra al inicio */
+    top: 125px;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease-in-out;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Cuando la barra debe mostrarse */
+.sidebar.show {
+    right: 0;
+}
+.content {
+    margin-right: 250px; /* Ajusta este valor según el ancho de la barra lateral */
+    margin-left: 100px;
+    transition: margin-right 0.4s ease-in-out;
+}
+
+/* Cuando la barra lateral está oculta */
+.sidebar:not(.show) ~ .content {
+    margin-right: 0;
+}
+
+.ad-container {
+    position: relative;
+}
+
+.ad {
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none; /* Ocultos al inicio */
+}
+
+.ad img {
+    width: 100%;
+   
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Botón para cerrar anuncio */
+.close-ad {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 18px;
+}
+
+.close-ad:hover {
+    background: darkred;
+}
+
+
+
+/* Contenedor principal para las imágenes */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre las imágenes */
+  }
+  
+  /* Estilo para cada caja de imagen */
+  .image-box {
+    position: relative;
+    overflow: hidden;
+    flex: 1; /* Hace que todas las imágenes tengan el mismo ancho */
+    transition: flex 0.3s ease; /* Animación suave al expandirse */
+  }
+  
+  /* Estilo para la imagen */
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Estilo para la información adicional */
+  .image-box .info {
+    position: absolute;
+    bottom: -100%; /* Inicialmente oculta */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: bottom 0.3s ease; /* Animación suave al mostrar */
+  }
+  
+  /* Efecto al pasar el mouse */
+  .image-box:hover {
+    flex: 2; /* Expande la imagen */
+  }
+  
+  .image-box:hover .info {
+    bottom: 0; /* Muestra la información */
+  }

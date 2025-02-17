@@ -1,0 +1,31 @@
+/* Estilos para el logo en la navbar */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.custom-navbar {
+    background-color: #004085 !important; /* Color personalizado */
+}
+.container-fluid1 {
+    margin-top: 130px; /* Ajusta según la altura de tu navbar */
+}
+/* Barra lateral */
+.sidebar {
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    
+}
+
+.sidebar .nav-link {
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #0f67c5;
+    color: white;
+}
